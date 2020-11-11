@@ -8,8 +8,7 @@ exports.getIndex = async (req, res) => {
     const game = await Game.find((data) => data);
 
     try {
-        console.log(game);
-        res.status(200).render('index', { game: game });
+        res.json(game);
     } catch (error) {
         console.log(error);
     }
@@ -69,7 +68,7 @@ exports.getEditGame = async (req, res) => {
 
 exports.postEditGame = (req, res) => {
     const gameId = req.body.gameId;
-    const { name, image, description, difficulty, length } = req.body;
+    const { name, image, description, difficulty, length, rating } = req.body;
 
     Game.findById(gameId)
         .then((game) => {
@@ -78,6 +77,7 @@ exports.postEditGame = (req, res) => {
             game.description = description;
             game.difficulty = difficulty;
             game.length = length;
+            game.rating = rating ? rating : "None";
 
             return game.save();
         })
@@ -95,10 +95,10 @@ exports.getAddGame = (req, res) => {
 };
 
 exports.postGame = (req, res) => {
-    const { name, image, description, difficulty, length } = req.body;
+    const { name, image, description, difficulty, length, rating } = req.body;
 
-    const game = new Game({ name: name, image: image, description: description, difficulty: difficulty, length: length });
+    const game = new Game({ name: name, image: image, description: description, difficulty: difficulty, length: length, rating: rating });
     game.save();
     console.log('Game Added to the database');
-    res.status(201).redirect('/');
+    res.status(201).redirect('http://localhost:3000/');
 };
