@@ -1,7 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react';
 
+import gameThumbnail from './components/Thumb.js';
 import gameComponent from './components/Game.js';
 
+import './styling/header.css';
 import './styling/game.css';
 
 const App = () => {
@@ -24,14 +26,16 @@ const App = () => {
 
   return (
     <Fragment>
-      <h1>Game Home</h1>
+      <div id ="mainHeader">
+      <h1>My Game List</h1>
+      </div>
 
-      <div>
+      <div id="gameList">
         {game.map((data) => (
-          gameComponent(data)
+          gameThumbnail(data)
         ))}
       </div>
-      <div>
+      {/* <div>
         <h1>Add New Game</h1>
         <form method="POST" action="http://localhost:8080/add-game">
           <div>
@@ -63,7 +67,7 @@ const App = () => {
             <button type="submit">Add Game</button>
           </div>
         </form>
-      </div>
+      </div> */}
     </Fragment>
   );
 };

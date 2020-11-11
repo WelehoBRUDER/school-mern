@@ -1,0 +1,13 @@
+#mainHeader {
+  width: 100%;
+  height: calc(30px + 3vmin);
+  background: rgb(5, 5, 5);
+  position: absolute;
+  left: 0vw;
+  top: 0vw;
+}
+
+#mainHeader h1 {
+  color: white;
+  font-size: calc(16px + 1vmin);
+}

@@ -6,6 +6,7 @@
 body {
   background: rgb(25, 25, 25);
   font-family: Roboto;
+  overflow-x: hidden;
 }
 
 
@@ -41,4 +42,79 @@ body {
   color: silver;
   text-shadow: 0px 0px 8px rgb(10, 10, 10);
 }
+
+#gameList {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: calc(10px + 2vmin);
+  top: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gameThumb {
+  width: 20vw;
+  height: 10vw;
+  background: rgba(60, 60, 60, 0.5);
+  position: relative;
+  left: 0vw;
+  top: 0vw;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: calc(10px + 1vmin);
+  display: inline-block;
+}
+
+.gameThumb h1, a {
+  position: absolute;
+  left: 50%;
+  top: 0.5vmin;
+  text-overflow: ellipsis;
+  font-size: calc(8px + 1.5vmin);
+  width: auto;
+  max-width: 10vw;
+}
+
+.gameThumb a {
+  overflow: hidden;
+}
+
+.gameThumb img {
+  width: 8vw;
+  height: 8vw;
+  position: absolute;
+  left: calc(10px + 1vmin);
+  top: calc(10px + 1vmin);
+}
+
+.thumbDesc {
+  font-size: calc(6px + 1vmin);
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 4vmin;
+  white-space: normal;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  max-width: 50%;
+  max-height: 5.5vw;
+  text-overflow: ellipsis;
+}
+
+.thumbRate {
+  border-radius: 100%;
+  width: 1.5vw;
+  height: 1.5vw;
+  font-size: 1.25vw;
+  color: white;
+  background: black;
+  filter: drop-shadow(0px 0px 0.2vw gold);
+  text-align: center;
+  position: absolute;
+  left: calc(10px + 7vw + 1vmin);
+  bottom: 0.8vw;
+}
+
 
