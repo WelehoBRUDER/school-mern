@@ -3,34 +3,41 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add Game</title>
+        <title>
+            <% if(editing){ %>Edit game<% } else { %>Add game<% } %>
+        </title>
     </head>
     <body>
-        <h1>Add Game</h1>
+        <h1><% if(editing){ %>Edit game<% } else { %>Add game<% } %></h1>
 
-        <form method="POST" action="/add-game">
+        <form method="POST" action="/<% if(editing){ %>edit-game<% } else { %>add-game<% } %>">
             <div>
                 <label>Name</label>
-                <input type="text" name="name" required />
+                <input type="text" name="name" value="<% if(editing){ %><%= game.name %><% } %>" required />
             </div>
             <div>
                 <label>Image</label>
-                <input type="text" name="image" required />
+                <input type="text" name="image" value="<% if(editing){ %><%= game.image %><% } %>" required />
             </div>
             <div>
                 <label>Description</label>
-                <input type="text" name="description" required />
+                <input type="text" name="description" value="<% if(editing){ %><%= game.description %><% } %>" required />
             </div>
             <div>
-              <label>Difficulty</label>
-              <input type="text" name="difficulty" />
+                <label>Difficulty</label>
+                <input type="text" name="difficulty" value="<% if(editing){ %><%= game.difficulty %><% } %>" required />
             </div>
             <div>
-              <label>Length</label>
-              <input type="text" name="length" />
+                <label>Average Playtime</label>
+                <input type="text" name="length" value="<% if(editing){ %><%= game.length %><% } %>" required />
             </div>
+            <% if(editing){ %>
             <div>
-                <button type="submit">Add Game</button>
+                <input type="hidden" name="gameId" value="<%= game.id %>" />
+            </div>
+            <% } %>
+            <div>
+                <button type="submit"><% if(editing){ %>Edit game<% } else { %>Add game<% } %></button>
             </div>
         </form>
     </body>

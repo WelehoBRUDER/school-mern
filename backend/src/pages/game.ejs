@@ -12,6 +12,8 @@
             <h1><%= game.name %></h1>
             <img src="<%= game.image %>" alt="<%= game.name %>" />
             <p><%= game.description %></p>
+            <p><%= game.difficulty %></p>
+            <p><%= game.length %></p>
             <div>
                 <form method="POST" action="/delete">
                     <div>
@@ -19,6 +21,9 @@
                         <button>Delete</button>
                     </div>
                 </form>
+            </div>
+            <div>
+                <a href="/edit-game/<%= game.id %>?edit=true">Edit</a>
             </div>
         </main>
     </body>
