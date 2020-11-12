@@ -19,7 +19,7 @@ const GameView = () => {
 
       try {
         setGame(data);
-        setLoaded(true);
+        if(data) setLoaded(true);
       } catch (error) {
         console.log(error);
       }

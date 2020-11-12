@@ -11,42 +11,68 @@ body {
 
 
 .game {
-  width: auto;
-  max-width: 50%;
+  width: 50%;
   height: auto;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   top: calc(10px + 4vmin);
   margin: 0px;
-  text-align: center;
-  color: white;
+  color: rgb(224, 224, 224);
+  text-shadow: calc(-2px - 0.1vmin) calc(2px + 0.1vmin) calc(4px + 0.2vmin) black;
+  display: grid;
 }
 
 .game h1, a {
   transition: 0.1s;
-  color: silver;
-  text-shadow: 0px 0px 8px rgb(41, 41, 41);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 8px rgb(0, 0, 0) !important;
   font-size: calc(14px + 2vmin);
-  filter: brightness(0.8);
+  filter: brightness(1);
+  position: absolute;
+  left: 0vw;
+  top: calc(-5px - 1vmin);
+  white-space: nowrap;
+}
+.gameContent {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  left: calc(25px + 36vmin);
+  top: calc(20px + 2.5vmin);
 }
 
-.game h1:hover, a:hover {
+.gameThumb h1:hover, a:hover {
   filter: brightness(1.1);
 }
 
 .game p {
   font-size: calc(8px + 1vmin);
+  margin: 0px;
+  margin-top: 8px;
 }
 
 .game img {
-  width: calc(40px + 24vmin);
+  width: calc(80px + 28vmin);
+  height: calc(80px + 28vmin);
+  position: absolute;
+  left: 0vw;
+  top: calc(20px + 3.5vmin);
+}
+
+.Rating {
+  position: absolute;
+  font-size: calc(16px + 2.4vmin) !important;
+  top: calc(90px + 32vmin);
+  left: 0vw;
+  color: white;
+  text-decoration: underline;
 }
 
 .gameSubTitle {
   font-size: calc(10px + 2vmin) !important;
-  color: silver;
-  text-shadow: 0px 0px 8px rgb(10, 10, 10);
+  color: rgb(255, 255, 255);
+  text-shadow: calc(-2px - 0.1vmin) calc(2px + 0.1vmin) calc(6px + 0.25vmin) black;
 }
 
 #gameList {
