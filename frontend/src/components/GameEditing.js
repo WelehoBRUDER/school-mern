@@ -1,4 +1,4 @@
-const addComponent = () => {
+const editComponent = (props) => {
   return (
     <div>
       <form method="POST" action="http://localhost:8080/edit-game">
@@ -50,4 +50,4 @@ const addComponent = () => {
   );
 }
 
-export default addComponent;
+export default editComponent;

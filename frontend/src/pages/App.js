@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import gameThumbnail from '../components/Thumb.js';
 
-
-import '../styling/header.css';
-import '../styling/game.css';
-
 const App = (props) => {
   useEffect(() => {
     const getAPI = async () => { 

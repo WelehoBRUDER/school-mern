@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
-import gameComponent from '../components/Game.js';
-import Error from '../components/Error.js';
+import editComponent from '../components/GameEditing.js';
 
-const GameView = () => {
-  const [loaded, setLoaded] = useState(false);
+const GameEdit = () => {
   let { id } = useParams();
   useEffect(() => {
     const getAPI = async () => {
@@ -14,27 +12,19 @@ const GameView = () => {
 
       try {
         setGame(data);
-        if(data) setLoaded(true);
       } catch (error) {
         console.log(error);
       }
     };
     getAPI();
   }, []);
-
   const [game, setGame] = useState([]);
-  if ((game.length < 1 || !game) && loaded) {
-    return (
-      <>
-        {Error()}
-      </>
-    )
-  }
   return (
     <>
-      {loaded ? gameComponent(game) : ""}
+    <h1 id="addGameTitle">Editing a Game</h1>
+    {editComponent()}
     </>
-  );
-};
+  )
+}
 
-export default GameView;
+export default GameEdit;

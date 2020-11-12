@@ -1,3 +1,5 @@
+import EditLogo from "../img/pencil.png";
+
 const gameComponent = (props) => {
   return (
     <div>
@@ -15,9 +17,10 @@ const gameComponent = (props) => {
             <p className="gameSubTitle">Final thoughts</p>
             <p>{props.final_thoughts ? props.final_thoughts : "None"}</p>
           </div>
-          <p class="Rating">{props.rating ? props.rating + " - " + ratings[props.rating] : "None"}</p>
+          <p className="Rating" style={{background: colors[props.rating]}}>{props.rating ? "Rated " + props.rating + "/10 | " + ratings[props.rating] : "None"}</p>
         </ul>
       </div>
+      <img src={EditLogo} id="gameEditBut" alt="Pencil" onClick={()=>window.location.href="/edit-game/" + props._id} />
     </div>
   );
 }
@@ -33,7 +36,21 @@ const ratings = {
   7: "Pretty Good",
   8: "Good",
   9: "Excellent",
-  10: "Nearly Perfect"
+  10: "Perfect"
+}
+
+const colors = {
+  0: "rgba(255, 0, 0, 0.33)",
+  1: "rgba(206, 15, 15, 0.33)",
+  2: "rgba(168, 18, 18, 0.33)",
+  3: "rgba(134, 15, 15, 0.33)",
+  4: "rgba(85, 10, 10, 0.33)",
+  5: "rgba(136, 136, 136, 0.33)",
+  6: "rgba(187, 187, 187, 0.33)",
+  7: "rgba(21, 56, 24, 0.33)",
+  8: "rgba(15, 73, 20, 0.33)",
+  9: "rgba(38, 189, 50, 0.33)",
+  10: "rgba(52, 255, 69, 0.33)"
 }
 
 export default gameComponent;
