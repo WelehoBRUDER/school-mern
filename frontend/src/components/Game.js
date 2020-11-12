@@ -11,6 +11,8 @@ const gameComponent = (props) => {
             <p>{props.difficulty ? props.difficulty : "None"}</p>
             <p className="gameSubTitle">How long to beat it? </p>
             <p>{props.length ? props.length : "None"}</p>
+            <p className="gameSubTitle">Final thoughts</p>
+            <p>{props.final_thoughts ? props.final_thoughts : "None"}</p>
             <p className="gameSubTitle">Rating</p>
             <p>{props.rating ? props.rating : "None"}</p>
         </ul>

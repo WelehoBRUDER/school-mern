@@ -17,16 +17,22 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  top: calc(10px + 1vmin);
+  top: calc(10px + 4vmin);
   margin: 0px;
   text-align: center;
   color: white;
 }
 
 .game h1, a {
+  transition: 0.1s;
   color: silver;
   text-shadow: 0px 0px 8px rgb(41, 41, 41);
   font-size: calc(14px + 2vmin);
+  filter: brightness(0.8);
+}
+
+.game h1:hover, a:hover {
+  filter: brightness(1.1);
 }
 
 .game p {
@@ -64,6 +70,8 @@ body {
   overflow: hidden;
   margin: calc(10px + 1vmin);
   display: inline-block;
+  border-radius: 1vw;
+  border: calc(4px + 0.2vmin) solid grey;
 }
 
 .gameThumb h1, a {
@@ -86,6 +94,8 @@ body {
   position: absolute;
   left: calc(10px + 1vmin);
   top: calc(10px + 1vmin);
+  border-radius: 0.5vw;
+  border: calc(2px + 0.1vmin) solid grey;
 }
 
 .thumbDesc {
@@ -115,6 +125,35 @@ body {
   position: absolute;
   left: calc(10px + 7vw + 1vmin);
   bottom: 0.8vw;
+}
+
+#addGame {
+  transition: 0.05s;
+  color: white;
+  font-size: calc(30px + 4vmin);
+  width: calc(40px + 4vmin);
+  height: calc(40px + 4vmin);
+  background: rgba(60, 60, 60, 0.5);
+  border-radius: 100%;
+  position: absolute;
+  right: calc(10px + 1vmin);
+  bottom: calc(10px + 1vmin);
+  text-align: center;
+  border: none;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  text-shadow: calc(-2px - 0.1vmin) calc(2px + 0.1vmin) calc(4px + 0.1vmin) black;
+  box-shadow: 0px 0px calc(6px + 0.1vmin) calc(8px + 0.1vmin) black;
+}
+
+#addGame:hover {
+  transform: scale(1.05);
+}
+
+#addGame:active {
+  transform: scale(0.99);
+  bottom: calc(8px + 0.8vmin);
 }
 
 

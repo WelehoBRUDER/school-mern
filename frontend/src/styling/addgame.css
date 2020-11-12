@@ -1,0 +1,66 @@
+#addGameTitle {
+  font-size: calc(12px + 2vmin);
+  color: white;
+  position: relative;
+  left: 50%;
+  top: calc(8px + 4vmin);
+  transform: translateX(-5%);
+}
+
+.gameEdit {
+  display: grid;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(5px + 4vmin);
+  width: auto;
+  height: auto;
+  max-width: 40%;
+}
+
+.gameEdit > label {
+  color: white;
+  font-size: calc(12px + 1.2vmin);
+  position: relative;
+}
+
+.gameEdit > input, select {
+  color: white;
+  background: rgba(5, 5, 5, 0.6);
+  border: none;
+  height: calc(18px + 2vmin);
+  position: relative;
+  font-size: calc(8px + 1vmin);
+}
+
+.gameEdit > textarea {
+  color: white;
+  background: rgba(5, 5, 5, 0.6);
+  border: none;
+  height: calc(200px + 20vmin);
+  position: relative;
+  font-size: calc(8px + 1vmin);
+  outline: none;
+  margin: 1vmin;
+  margin-left: 0vmin;
+}
+
+.gameEditSubmit {
+  transition: 0.1s;
+  border: none;
+  font-size: calc(14px + 1.2vmin);
+  color: white;
+  background: rgb(5, 5, 5);
+  width: auto;
+  height: auto;
+  padding: calc(8px + 1vmin);
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(20px + 2vmin);
+}
+
+.gameEditSubmit:hover {
+  filter: brightness(1.5);
+}

@@ -1,11 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Header from './components/Header';
+import App from './pages/App';
+import GameView from './pages/GameView';
+import GameAdd from './pages/GameAdd';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <Router>
+      <Switch>
+        <Route path="/" exact component={App} />
+        <Route path="/view/:id" exact component={GameView} />
+        <Route path="/add-game" exact component={GameAdd} />
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,21 @@
+#errorContainer {
+  width: auto;
+  height: auto;
+  max-width: calc(80px + 20vw);
+  max-height: 60%;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100px + 10vmin);
+}
+
+#errorContainer h1 {
+  font-size: calc(20px + 2.5vmin);
+  color: rgb(160, 20, 20);
+}
+
+#errorContainer p {
+  font-size: calc(11px + 1.3vmin);
+  color: rgb(240, 61, 61);
+}
