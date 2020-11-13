@@ -5,6 +5,7 @@ import App from './pages/App';
 import GameView from './pages/GameView';
 import GameAdd from './pages/GameAdd';
 import GameEdit from './pages/GameEdit';
+import GameDelete from './pages/GameDelete';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route path="/view/:id" exact component={GameView} />
         <Route path="/add-game" exact component={GameAdd} />
         <Route path="/edit-game/:id" exact component={GameEdit} />
+        <Route path="/delete-game/:id" exact component={GameDelete} />
       </Switch>
     </Router>
   </React.StrictMode>,

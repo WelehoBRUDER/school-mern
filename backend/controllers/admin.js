@@ -31,7 +31,7 @@ exports.postDelete = async (req, res) => {
     const game = await Game.findByIdAndRemove(gameId, (data) => data);
 
     try {
-        res.redirect('/');
+        res.redirect('http://localhost:3000');
     } catch (error) {
         console.log(error);
     }

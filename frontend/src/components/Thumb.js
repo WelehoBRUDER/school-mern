@@ -3,7 +3,7 @@ import config from '../config.json';
 const thumbComponent = (props) => {
   return (
     <div>
-      <div key={props._id} className="gameThumb">
+      <div key={props._id} className="gameThumb" onClick={()=>{window.location.href="/view/" + props._id}}>
         <ul>
             <h1>
               <a href={"http://localhost:3000/view/" + props._id} title={props.name}>{props.name}</a>

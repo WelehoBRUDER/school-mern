@@ -68,7 +68,7 @@
   filter: brightness(1.25);
 }
 
-#dumbhack {
+#dumbhack, #del input {
   width: 0px;
   height: 0px;
   font-size: 0px;

@@ -60,16 +60,18 @@ body {
   position: absolute;
   right: calc(7px + 50%);
   top: 50px;
+  box-sizing: border-box;
+  border: 8px solid rgba(70, 70, 70, 0.5);
+  border-radius: 25px;
 }
 
 .Rating {
   position: absolute;
   font-size: 30px !important;
   color: white;
-  left: calc(50% - 406px);
+  left: calc(50% - 396px);
   top: 480px;
   width: fit-content;
-  margin: 0px;
   padding: 4px;
   filter: brightness(0.6);
 }
@@ -91,6 +93,7 @@ body {
 }
 
 .gameThumb {
+  transition: transform 0.1s;
   width: 430px;
   height: 225px;
   background: rgba(60, 60, 60, 0.5);
@@ -103,7 +106,13 @@ body {
   display: inline-block;
   border-radius: 25px;
   border: 6px solid grey;
-  box-shadow: inset 0px 0px 12px 9px rgba(30, 30, 30, 0.5);
+  box-shadow: inset 0px 0px 12px 9px rgba(30, 30, 30, 0.5), -4px 6px 8px 8px rgba(15, 15, 15, 0.75);
+  cursor: pointer;
+  user-select: none;
+}
+
+.gameThumb:hover {
+  transform: scale(1.03);
 }
 
 .gameThumb h1, .gameThumb a {
@@ -194,7 +203,7 @@ body {
 }
 
 #gameEditBut {
-  transition: 0.05s;
+  transition: transform 0.05s;
   width: calc(40px + 4vmin);
   height: calc(40px + 4vmin);
   background: rgba(60, 60, 60, 0.5);
@@ -209,7 +218,23 @@ body {
   box-shadow: 0px 0px calc(6px + 0.1vmin) calc(8px + 0.1vmin) black;
 }
 
-#gameEditBut:hover {
+#gameDeleteBut {
+  transition: transform 0.05s;
+  width: calc(40px + 4vmin);
+  height: calc(40px + 4vmin);
+  background: rgba(255, 0, 0, 0.5);
+  border-radius: 100%;
+  position: fixed;
+  right: calc(60px + 6vmin);
+  bottom: calc(10px + 1vmin);
+  border: none;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px calc(6px + 0.1vmin) calc(8px + 0.1vmin) black;
+}
+
+#gameEditBut:hover, #gameDeleteBut:hover {
   transform: scale(1.05);
 }
 
