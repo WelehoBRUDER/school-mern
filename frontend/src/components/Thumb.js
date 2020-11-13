@@ -1,3 +1,5 @@
+import config from '../config.json';
+
 const thumbComponent = (props) => {
   return (
     <div>
@@ -8,7 +10,7 @@ const thumbComponent = (props) => {
             </h1>
             <img src={props.image} alt={props.name} />
             <p className="thumbDesc">{props.description ? props.description : "None"}</p>
-            <div className="thumbRate">{props.rating ? props.rating : "?"}</div>
+            <div className="thumbRate" style={{background: config.colors[props.rating]}}>{props.rating || props.rating === 0 ? props.rating : "?"}</div>
         </ul>
       </div>
     </div>

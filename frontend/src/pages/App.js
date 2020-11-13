@@ -25,7 +25,7 @@ const App = (props) => {
           gameThumbnail(data)
         ))}
       </div>
-      <button id="addGame" onClick={()=>window.location.href="/add-game"}>+</button>
+      <button id="addGame" title="Add new entry" onClick={()=>window.location.href="/add-game"}>+</button>
     </>
   );
 };

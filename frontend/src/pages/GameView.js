@@ -7,6 +7,7 @@ import Error from '../components/Error.js';
 const GameView = () => {
   const [loaded, setLoaded] = useState(false);
   let { id } = useParams();
+  console.log(id);
   useEffect(() => {
     const getAPI = async () => {
       const response = await fetch('http://localhost:8080/' + id);
@@ -23,16 +24,16 @@ const GameView = () => {
   }, []);
 
   const [game, setGame] = useState([]);
-  if ((game.length < 1 || !game) && loaded) {
-    return (
-      <>
-        {Error()}
-      </>
-    )
-  }
+  // if ((game.length < 1 || !game) && loaded) {
+  //   return (
+  //     <>
+  //       {Error()}
+  //     </>
+  //   )
+  // }
   return (
     <>
-      {loaded ? gameComponent(game) : ""}
+      {gameComponent(game)}
     </>
   );
 };

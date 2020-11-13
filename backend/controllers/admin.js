@@ -61,6 +61,7 @@ exports.getEditGame = async (req, res) => {
 };
 
 exports.postEditGame = (req, res) => {
+    console.log(req.body);
     const gameId = req.body.gameId;
     const { name, image, description, difficulty, length, final_thoughts, rating } = req.body;
 
@@ -77,8 +78,7 @@ exports.postEditGame = (req, res) => {
             return game.save();
         })
         .then(() => {
-            console.log('Item Updated');
-            res.status(201).redirect('/');
+            res.status(201).redirect('http://localhost:3000/view/' + gameId);
         })
         .catch((err) => {
             console.log(err);

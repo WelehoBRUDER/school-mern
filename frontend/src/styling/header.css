@@ -8,15 +8,16 @@
 }
 
 #mainHeader a {
-  transition: 0.1s;
+  transition: filter 0.1s;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   position: absolute;
   left: 10px;
-  top: 10px;
+  top: 5px;
   text-shadow: calc(-2px + -0.1vmin) calc(2px + 0.1vmin) calc(4px + 0.1vmin) rgb(8, 8, 8);
   filter: brightness(0.75);
   white-space: nowrap;
+  text-decoration: none;
 }
 
 #mainHeader a:hover {

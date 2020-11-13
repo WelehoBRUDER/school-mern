@@ -22,7 +22,7 @@ const GameEdit = () => {
   return (
     <>
     <h1 id="addGameTitle">Editing a Game</h1>
-    {editComponent()}
+    {editComponent(game)}
     </>
   )
 }
