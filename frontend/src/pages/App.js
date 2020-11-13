@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import gameThumbnail from '../components/Thumb.js';
 
-
-import '../styling/header.css';
-import '../styling/game.css';
-
 const App = (props) => {
   useEffect(() => {
     const getAPI = async () => { 
@@ -29,7 +25,7 @@ const App = (props) => {
           gameThumbnail(data)
         ))}
       </div>
-      <button id="addGame" onClick={()=>window.location.href="/add-game"}>+</button>
+      <button id="addGame" title="Add new entry" onClick={()=>window.location.href="/add-game"}>+</button>
     </>
   );
 };

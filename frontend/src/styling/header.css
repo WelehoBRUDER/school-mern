@@ -1,6 +1,6 @@
 #mainHeader {
   width: 100%;
-  height: calc(30px + 3vmin);
+  height: 60px;
   background: rgb(5, 5, 5);
   position: absolute;
   left: 0vw;
@@ -8,15 +8,16 @@
 }
 
 #mainHeader a {
-  transition: 0.1s;
+  transition: filter 0.1s;
   color: white;
-  font-size: calc(12px + 1vmin);
+  font-size: 40px;
   position: absolute;
-  left: calc(10px + 1vmin);
-  top: calc(10px + 0.5vmin);
+  left: 10px;
+  top: 5px;
   text-shadow: calc(-2px + -0.1vmin) calc(2px + 0.1vmin) calc(4px + 0.1vmin) rgb(8, 8, 8);
   filter: brightness(0.75);
   white-space: nowrap;
+  text-decoration: none;
 }
 
 #mainHeader a:hover {
@@ -61,4 +62,18 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(20, 20, 20);
+}
+
+@media only screen and (max-width: 600px) {
+  #mainHeader a {
+    font-size: 24px;
+    top: 13px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #mainHeader a {
+    font-size: 20px;
+    top: 15px;
+  }
 }

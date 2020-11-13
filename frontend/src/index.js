@@ -4,8 +4,14 @@ import Header from './components/Header';
 import App from './pages/App';
 import GameView from './pages/GameView';
 import GameAdd from './pages/GameAdd';
+import GameEdit from './pages/GameEdit';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import './styling/header.css';
+import './styling/game.css';
+import './styling/error.css';
+import './styling/addgame.css';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +21,7 @@ ReactDOM.render(
         <Route path="/" exact component={App} />
         <Route path="/view/:id" exact component={GameView} />
         <Route path="/add-game" exact component={GameAdd} />
+        <Route path="/edit-game/:id" exact component={GameEdit} />
       </Switch>
     </Router>
   </React.StrictMode>,

@@ -1,3 +1,6 @@
+import EditLogo from "../img/pencil.png";
+import config from '../config.json';
+
 const gameComponent = (props) => {
   return (
     <div>
@@ -15,25 +18,14 @@ const gameComponent = (props) => {
             <p className="gameSubTitle">Final thoughts</p>
             <p>{props.final_thoughts ? props.final_thoughts : "None"}</p>
           </div>
-          <p class="Rating">{props.rating ? props.rating + " - " + ratings[props.rating] : "None"}</p>
+          <p className="Rating" style={{background: config.colors[props.rating]}}>{props.rating || props.rating === 0 ? "Rated " + props.rating + "/10 | " + config.rates[props.rating] : "None"}</p>
         </ul>
       </div>
+      <form method="GET" action={"http://localhost:8080/edit-game/" + props._id}>
+      <img type="submit" src={EditLogo} id="gameEditBut" alt="Pencil" title="Edit this entry" onClick={()=>window.location.href="/edit-game/" + props._id} />
+      </form>
     </div>
   );
-}
-
-const ratings = {
-  0: "Horrible",
-  1: "Very bad",
-  2: "Bad",
-  3: "Very underwhelming",
-  4: "Boring",
-  5: "Okay",
-  6: "Decent",
-  7: "Pretty Good",
-  8: "Good",
-  9: "Excellent",
-  10: "Nearly Perfect"
 }
 
 export default gameComponent;
