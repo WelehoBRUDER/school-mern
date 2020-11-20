@@ -13,6 +13,7 @@ import './styling/header.css';
 import './styling/game.css';
 import './styling/error.css';
 import './styling/addgame.css';
+import './styling/delete.css';
 
 ReactDOM.render(
   <React.StrictMode>

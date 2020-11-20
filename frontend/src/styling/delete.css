@@ -1,0 +1,114 @@
+.deletion {
+  width: 50%;
+  height: auto;
+  left: 50%;
+  top: 120px;
+  transform: translateX(-50%);
+  position: absolute;
+  text-align: center;
+}
+
+.deletionTitle {
+  font-size: 40px;
+  color: red;
+  text-shadow: -2px 2px 4px darkred;
+}
+
+.deletionSubtitle {
+  font-size: 30px;
+  color: darkred;
+  text-shadow: -2px 2px 4px rgb(78, 0, 0);
+}
+
+.deletion button {
+  transition: 0.1s;
+  filter: brightness(0.9);
+  width: 25%;
+  position: absolute;
+  top: 200px;
+  height: 60px;
+  font-size: 32px;
+  color: white;
+  text-shadow: -2px 2px 4px silver;
+  border: 4px solid silver;
+  cursor: pointer;
+}
+
+.deletionAccept {
+  background: darkred;
+  left: 10%;
+  box-shadow: inset 0px 0px 8px 6px rgb(92, 2, 2), -2px 2px 6px 4px black;
+}
+
+.deletionCancel {
+  background: green;
+  right: 10%;
+  box-shadow: inset 0px 0px 8px 6px rgb(2, 92, 29), -2px 2px 6px 4px black;
+}
+
+.deletion button:hover {
+  filter: brightness(1.15);
+}
+
+@media only screen and (max-width: 1300px) {
+  .deletionTitle {
+    font-size: 34px;
+  }
+
+  .deletionSubtitle {
+    font-size: 25px;
+  }
+
+  .deletion button {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .deletionTitle {
+    font-size: 28px;
+  }
+
+  .deletionSubtitle {
+    font-size: 20px;
+  }
+
+  .deletion button {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .deletionTitle {
+    font-size: 24px;
+  }
+
+  .deletionSubtitle {
+    font-size: 16px;
+  }
+
+  .deletion button {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .deletionTitle {
+    font-size: 20px;
+  }
+
+  .deletionSubtitle {
+    font-size: 14px;
+  }
+
+  .deletionCancel {
+    top: 290px !important;
+  }
+
+  .deletion button {
+    font-size: 12px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
