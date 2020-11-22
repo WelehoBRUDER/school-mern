@@ -83,13 +83,14 @@ body {
 }
 
 #gameList {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
   position: absolute;
   left: 0px;
   top: 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .gameThumb {
@@ -102,7 +103,7 @@ body {
   top: 0vw;
   white-space: nowrap;
   overflow: hidden;
-  margin: 12px;
+  margin: 0px 25px 25px 25px;
   display: inline-block;
   border-radius: 25px;
   border: 6px solid grey;
