@@ -4,7 +4,6 @@ import gameThumbnail from '../components/Thumb.js';
 import sortList from '../components/sort.js';
 
 const search = window.location.href.split("/search/")[1];
-console.log(search);
 
 const App = () => {
   useEffect(() => {
